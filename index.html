@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Piero Pretto">
+    <meta name="keywords" content="Pragmatic Media, Ty and Slob, Piero Pretto">
+    <meta name="description" content="Pragmatic Media Marketing wants to be your one-stop shop for all your marketing needs." />
+    <meta property="og:image" content="http://pragmaticmediamarketing.com/img/portfolio-bg.jpg"/>
+    <meta property="og:title" content="Pragmatic Media Marketing"/>
+    <meta property="og:description" content="Pragmatic Media Marketing wants to be your one-stop shop for all your marketing needs." />
+    <meta property="og:url" content="http://pragmaticmediamarketing.com"/>
+    <meta property="og:site_name" content="http://pragmaticmediamarketing.com"/>
+    <meta property="og:type" content="website"/>
+
+    <title>Pragmatic Media - Advertising Agency</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-gallery.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="app" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Pragmatic</span> Media
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav" id="nav-list">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Our Work</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Pragmatic Media</h1>
+                        <h1 class="intro-text"><small>Advertising Agency</small></h1>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Us</h2>
+                <p>Pragmatic Media LLC wants to be your one-stop shop for all your marketing needs.</p>
+                <p> We strive to build relationships with our clients that lasts for years, not a few weeks. Pragmatic Media can perform a variety of marketing duties such as creative, production, media buying, representation, and crisis management. Using an agency has several benefits such as agency discounts when placing buys in a market and our current relationships with media outlets allow us flexibility when negotiating advertising costs. Feel free to <a href="#contact">contact us</a> to set up an appointment to discuss how we can help you grow your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Our Work</h2>
+                    <a href="#/" id="portfolio-open" class="btn btn-default btn-lg">See Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center" ng-controller="ContactFormCtrl">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us</h2>
+                <div role="form" title="contact submission form" id="formContainer">
+                  <form id="form" ng-submit="messageSubmit()" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div role="list" class="form-group">
+                        <input role="listitem" ng-model="name" type="text" class="form-control" id="title" aria-describedby="name input" placeholder=" Name" pattern=".{3,}" required>
+                      <br>
+                        <input role="listitem" ng-model="business" type="text" class="form-control" id="title" aria-describedby="business input" placeholder=" Business" pattern=".{3,}" required>
+                      <br>
+                        <input role="listitem" ng-model="email" type="email" class="form-control" id="title" aria-describedby="email input" placeholder=" Email" pattern=".{3,}" required>
+                      <br>
+                        <textarea role="listitem" ng-model="message" type="text" class="form-control" id="description" rows="4" aria-describedby=" message" placeholder=" Message (optional)" pattern=".{5,}"></textarea>
+                    </div>
+                    <br>
+                    <button id="emailButton" type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                  <br>
+                  <span id="status"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="#/" class="closebtn" id="portfolio-close">&times;</a>
+
+        <!-- modal -->
+        <div id="modal_container" class="row col-xs-12">
+            <div class="col-sm-0 col-lg-1"></div>
+            <div class="col-sm-12 col-lg-10">
+
+                <!-- carousel section-->
+                <section class="gallery">
+                    <div class="carousel">
+
+                        <input type="radio" id="image1" name="gallery-control" checked>
+                        <input type="radio" id="image2" name="gallery-control">
+                        <input type="radio" id="image3" name="gallery-control">
+                        <input type="radio" id="image4" name="gallery-control">
+                        <input type="radio" id="image5" name="gallery-control">
+                        <input type="radio" id="image6" name="gallery-control">
+
+
+                        <input type="checkbox" id="fullscreen" name="gallery-fullscreen-control"/>
+
+                        <div class="wrap wow fadeInUp">
+
+                            <figure>
+                                <label for="fullscreen">
+                                    <div class="gallery-item">
+                                        <iframe class="embed-responsive-item youtube-video video-0" width="100%" height="100%" scrolling="no" frameborder="no" src="" allowfullscreen></iframe>
+                                    </div>
+                                </label>
+                            </figure>
+
+                            <figure>
+                                <label for="fullscreen">
+                                    <div class="gallery-item">
+                                        <iframe class="embed-responsive-item youtube-video video-1" width="100%" height="100%" scrolling="no" frameborder="no" src="" allowfullscreen></iframe>
+                                    </div>
+                                </label>
+                            </figure>
+
+                            <figure>
+                                <label for="fullscreen">
+                                    <div class="gallery-item">
+                                        <iframe class="embed-responsive-item youtube-video video-2" width="100%" height="100%" scrolling="no" frameborder="no" src="" allowfullscreen></iframe>
+                                    </div>
+                                </label>
+                            </figure>
+
+                            <figure>
+                                <label for="fullscreen">
+                                    <div class="gallery-item">
+                                        <iframe class="embed-responsive-item youtube-video video-3" width="100%" height="100%" scrolling="no" frameborder="no" src="" allowfullscreen></iframe>
+                                    </div>
+                                </label>
+                            </figure>
+
+                        </div>
+
+                        <div class="thumbnails">
+
+                            <div class="slider"><div class="indicator"></div></div>
+
+                            <label data-image-id="0" for="image1" class="thumb wow fadeInUp"></label>
+
+                            <label data-image-id="1" data-wow-delay="0.25s" for="image2" class="thumb wow fadeInUp"></label>
+
+                            <label data-image-id="2" data-wow-delay="0.5s" for="image3" class="thumb wow fadeInUp"></label>
+
+                            <label data-image-id="3" data-wow-delay="0.75s" for="image4" class="thumb wow fadeInUp"></label>
+
+
+                        </div>
+                    </div>
+                </section>
+                <!-- end of carousel -->
+
+            </div>
+            <div class="col-sm-0 col-lg-1"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p><small>Copyright &copy; Piero Pretto 2017</small></p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script type="text/javascript" src="js/grayscale.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
